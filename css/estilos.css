@@ -1,0 +1,379 @@
+    /* ----------   AUTOR Y FECHA   ---------- */
+/*Marien Flores Carballo
+2018*/
+
+
+
+    /* ----------   ESTILOS GENERALES   ---------- */
+
+*{margin: 0;padding: 0;box-sizing: border-box}
+
+body{color: rgba(0, 0, 0, 0.966); background-color: rgba(247, 222, 168, 0.192);
+    font-family: 'Crimson Text', serif;font-size: 20px;position: relative} 
+
+a {text-decoration: none; color: rgba(192, 4, 29, 0.995); font-weight: 1000 }
+
+a:hover {color:rgb(221, 80, 109)}
+
+a.activo1{color: rgba(0, 0, 0, 0.986)}
+a:active{color: rgba(0, 0, 0, 0.986)}
+
+img {max-width: 100%; line-height: 1.8em; font-size: 100%}
+   
+p{padding: 10px;}
+
+.boton{margin: 40px; color: white; background-color: #c0041df4;
+            font-size: 24px; padding: 10px;border-radius: 10px;} 
+
+
+ @keyframes intermitente {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity:0;}
+}
+    
+.separador{border: solid 1px rgb(221, 80, 109); display: none; width: 60%}   
+
+iframe{box-shadow: 4px 4px 8px gray}
+
+h1{font-size: 32px;padding: 10px}
+
+h2{font-size: 24px;padding: 10px}
+
+ul {padding-left: 60px}
+
+li{padding: 10px; line-height: 1.4em}
+
+         
+        /* ----------   CLASES TARJETAS  ---------- */
+
+.contenedores{/*Receta Grid para colocación automática de filas y columnas*/
+    display:grid;/*aut-fit crea tantas columnas como necesitemos 
+                    del ancho especificado*/
+    grid-template-columns: repeat(auto-fit,300px);
+    grid-template-rows: repeat (2,400px);
+    grid-gap: 40px;justify-content: center;margin:20px;margin-bottom: 80px}
+
+.card {width: 300px;height: 450px; box-shadow: 2px 2px 4px gray;
+    /*margin: 40px*/}
+
+.card .adress {padding: 2px 10px; font-size: 14px;}
+
+.imagen {width: 300px; height: 200px;overflow: hidden}
+
+.imagen img { height: 200px;width: 100%}
+
+.btn {background-color: crimson; color: white; font-size: 18px; padding: 10px;
+    text-decoration: none;border-bottom: 4px solid rgb(138,11,36); 
+    align-self: center; border-radius: 25px;}
+
+.btn:hover {background-color: rgb(155,13,41);}
+
+.datos {height: 250px;padding: 10px;display: flex;flex-direction: column;
+    align-items: flex-start; justify-content: space-between}
+
+.arriba {width: 280px; display:flex;justify-content: space-between;}
+
+.esquema {width: 210px}
+
+.esquema p:first-child {color: crimson; font-weight: bold; font-size: 18px;}
+
+.precio p {color: #666; font-size: 16px; display: flex; align-items: center}
+
+.precio p:hover {color: crimson}
+
+.card .caracteristicas p {font-size: 16px;}
+.caracteristicas{display: flex;}
+
+.siguiente {float: right}
+
+.anterior {float: left}
+
+.limpiaflotante{clear: both}
+
+button{background-color: crimson;font-size: 22px;
+    padding: 10px;border: none;border-radius: 5px}
+
+.pagina{color: crimson;background-color: white; 
+    border: 1px solid; font-size: 16px;
+    padding: 5px; border-radius: 5px}
+
+.paginacion{text-align: center;margin: 10px 10px 100px 10px;}
+
+
+    /* ----------   ESTILOS DE INICIO  ---------- */
+
+.inicio{position: absolute /*absoluta a su padre body*/ ; top: 0; 
+    box-shadow: none; border: 1px solid rgb(0, 0, 0)}
+
+.inicio ul {border: 1px solid rgb(0, 0, 0)}
+
+.introduccion img {margin-bottom: 5px}
+
+
+    /* ----------   CABECERA CON BARRA DE NAVEGACIÓN   ---------- */
+    
+header {display: flex; justify-content: space-between; height: 100px;
+    /* Altura común de cabeceras: 80, 120, etc */
+    width: 100%; padding: 20px; align-items: center;
+    font-family: 'Pacifico';
+    box-shadow: 0 4px 8px gray; border: none; font-size: 75%;
+    position: initial;}
+
+header .burger {color: rgb(61, 61, 61); font-size: 25px; display: none;}
+
+header nav ul {list-style: none;display: flex;}
+
+header nav ul li {padding: 10px; font-size: 25px;}
+
+header nav ul li a {color: rgba(192, 4, 29, 0.995)}
+            
+
+
+    /* ----------   SECCIÓN HEROE   ---------- */
+
+.hero {height: 100vh;background-image: url('../img/boadilla_del_monte_.jpg');
+    background-repeat: no-repeat; background-position: center;
+    background-size: cover;background-attachment: fixed; display: flex;
+    flex-direction: column; justify-content: flex-end; align-items:flex-start;}
+
+.hero h1 {font-size: 60px; text-shadow: 2px 2px 2px rgba(121, 11, 33, 0.445);}
+
+.hero h2 {color: rgb(133, 133, 133); font-size: 30px; margin-bottom: 40px;}
+
+.hero a {color: rgb(36, 36, 36); font-size: 40px; margin-bottom: 40px;
+        animation-name: intermitente; animation-duration: 1550ms; 
+        animation-iteration-count: infinite; }
+    
+.banda {width: 100%; background-color: rgba(148, 0, 20, 0.65); display: flex;
+    flex-direction: column; justify-content: flex-end; align-items:center;}
+
+.direccion{line-height: 1.8em; font-size: 100%; margin-top: 30px}
+
+.verde{background-color: rgb(0, 128, 85)}
+.amarillo {background-color: goldenrod}
+
+
+
+    /* ----------   LAYOUT maquetación   ---------- */
+
+.fila {padding: 30px; display:flex;flex-wrap: wrap;}
+
+.ultima {margin-bottom: 40px}
+
+.col1{padding: 10px;flex-basis: 100px;flex-grow: 1;}
+
+.col2{padding: 10px;flex-basis: 100px;flex-grow: 2;}
+
+.col3{padding: 10px;flex-basis: 100px;flex-grow: 3;}
+
+.col100 {padding: 10px; width: 100%; display: flex;justify-content: center;
+                align-items: center}
+
+.centrado{display: flex; align-items: center;justify-content: center}
+
+.piederecho {display: flex;align-items: flex-end;}
+
+.columna{display:flex; flex-direction: column; justify-content: center;
+        align-items: center} 
+
+.izquierda {padding:20px}
+
+.izquierda p {padding: 5px}
+
+.derecha {font-size: 40px; display: flex;flex-direction: column;
+        justify-content: space-between;align-items: center;flex-wrap: wrap;padding:20px}
+
+.centro {display: flex; flex-direction: column;justify-content: space-around;
+            align-items: center;padding:20px}
+
+.legales a {font-size: 14px;}
+
+.centro a {color: rgba(192, 4, 29, 0.955);}
+.centro a.activo2{color: rgba(255, 255, 255, 0.822)}
+
+
+
+    /* ----------   SECCIÓN CON IMAGEN DE FONDO   ---------- */
+
+.fondo {background-image: url('../img/Casas-de-lujo-en-Marbella-Inmobiliaria-Nevado-Realty-en-Marbella-centro-2-1920x1080.jpg');
+    background-position:center; background-size: cover; background-repeat: no-repeat; padding: 60px 40px;
+    height:250px;}
+
+.slogan {font-size: 40px; text-align: center;
+        background-color: rgba(255, 255, 255, 0.20)}
+
+
+
+    /*   ----------   FORMULARIO NEWSLETTER     ----------  */
+
+.input_newsletter {color: rgba(0, 0, 0, 0.651);font-size: 20px;padding: 10px; 
+        border:4px solid rgba(129, 4, 29, 0.651); margin: 0px 10px;
+        border-radius: 25px; padding-left:23px; }
+
+.boton_newsletter{margin: 10px; color: rgb(36, 36, 36); background-color: rgba(192, 4, 29, 0.25);
+                font-size: 20px; padding: 10px;border-radius: 25px; 
+                border: 4px solid rgba(129, 4, 29, 0.651)}
+
+.boton_newsletter:hover{background-color: rgba(129, 4, 29, 0.651);cursor: pointer}
+
+.boton_newsletter:focus, .input_newsletter:focus {outline:none;}
+
+.newsletter {font-size: 28px; color: rgb(192, 4, 29)}
+
+
+    /*   ----------   FORMULARIO CONTACTO     ----------  */
+
+.contenedor {display: flex; flex-direction: column; align-items: center;
+    display: flex; text-align: center;background-image: url("../img/Luxury-Homes-1-1024x683.jpg");
+    background-repeat: no-repeat;background-size: cover;box-shadow:  4px 4px 16px rgba(0, 0, 0, 0.63); 
+    /*background-color: #383838;*/}
+
+form { opacity: 1;margin:40px 0 -10px; padding: 10px; }
+    .col33 {width: 33%;display: flex; flex-direction: column;padding: 10px}
+
+    .col50{width: 50%; display: flex; flex-direction: column; padding: 10px;}
+    
+    .col66{width: 66%;display: flex;flex-direction: column; padding: 10px; }
+
+label{padding: 5px; opacity: 0; transition:1s;}
+
+input{font-size: 20px;padding: 5px;border: solid 2px #772938;color: rgb(238, 57, 93);}
+
+input:focus{background-color: rgb(192, 29, 61); color: antiquewhite;outline: none;}
+
+input::-webkit-input-placeholder {color: rgb(221, 80, 109);}
+
+        /* ----------   IDENTIDADES   ---------- */
+
+#nombre::-webkit-input-placeholder {
+        background-image: url('../iconos/user-silhouette.svg');
+        background-repeat: no-repeat; padding-left: 25px;}
+
+#apellidos::-webkit-input-placeholder {
+        background-image: url('../iconos/avatar.svg');
+        background-repeat: no-repeat; padding-left: 25px;}
+
+#mail::-webkit-input-placeholder {
+        background-image: url('../iconos/opened-email-envelope.svg');
+        background-repeat: no-repeat; padding-left: 25px;}
+
+#movil::-webkit-input-placeholder {
+        background-image: url('../iconos/icons8-smartphone-con-pantalla-táctil-50.png');
+        background-repeat: no-repeat; padding-left: 25px;}
+
+        /* ----------   SUBMIT  ---------- */
+
+input[type="submit"]{background-color: #772938; 
+        font-size: 22px; text-align: center; width: 40%; 
+        opacity: 1; transition: 700ms}
+
+input[type="submit"]:hover{background-color: #cc3251; border: 2px #cc3251;
+        font-size: 23px; text-align: center; width: 40%; cursor: pointer; 
+        color: #66222f;}
+
+
+
+    /*  ----------   FOOTER     ----------  */
+
+footer {opacity: 0.9;
+    background:
+linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%,
+transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 23px 23px;position: relative; display:flex; flex-wrap: wrap;}
+/* color: #3f3f3f */
+
+        /* hijo de dooter */
+.top {font-size: 30px;position: absolute; top:-40px;right: 50%; background-color: rgba(192, 4, 29, 0.80);
+        height: 50px; width: 50px; color: rgb(255, 255, 255); border-radius: 35px;display: flex; 
+        justify-content: center;align-items: center; transform: translateX(50%);}
+
+footer a:hover {color: rgb(228, 255, 77)}
+
+.redes {font-size: 35px}
+
+.legales a {font-size: 14px;}
+
+.minifooter {font-size: 16px;padding: 5px;}
+
+footer {color: rgb(192, 4, 29); margin-top: 25px;}   
+
+
+
+    /* ----------   MEDIA QUERIES  ---------- */
+
+@media(min-width:1920px){form{max-width: 1400px}}
+
+@media(min-width:1110px){
+    .first {display:flex; flex-direction: column}
+    .introduccion {display: flex;flex-direction:row;}
+    .introduccion img{height: 150px;padding: 5px;
+        margin-top: 10px; margin-bottom: 20px; justify-content: space-between}
+}
+
+@media (max-width: 920px){
+    .izquierda, .centro, .derecha {flex-basis: 200px;}
+}
+
+@media(max-width:800px){form{width: 90%}}
+
+@media (max-width: 700px){
+        nav {display: none;}
+        header .burger {display: initial;}
+        .hero h1 {font-size: 34px; text-shadow: 2px 2px 2px rgba(220, 20, 60, 0.425);
+        text-align: center}
+        .hero h2 {font-size: 24px; text-align: center}
+        body {font-size: 18px;}
+        .columna img {height: 160px;}
+        .columna .boton {margin: 40px; font-size: 18px; padding: 12px; border-radius: 12px}
+        .slogan{font-size: 35px}
+        .newsletter{font-size: 26px; text-align: center}
+        .input_newsletter {font-size: 18px;padding: 12px; border-radius: 24px;}
+        .boton_newsletter {font-size: 18px;padding: 10px; border-radius: 24px;}
+}
+
+@media (max-width: 640px){
+        body {font-size: 17px;}
+        .fila {flex-direction: column; align-items: center;}
+        .separador{display: initial}
+        .col1{flex-basis: initial; margin: 20px}
+        .slogan{font-size: 26px}
+        .newsletter{font-size: 24px; text-align: center;}
+        .input_newsletter {font-size: 16px;padding: 12px; border-radius: 24px;}
+        .boton_newsletter {font-size: 16px;padding: 10px; border-radius: 25px;}
+}
+
+@media(max-width:620px){.fila{display:flex; flex-direction: column}
+                        .col33, .col50, .col66 {width: 100%}
+                        .col100radio {display:flex; justify-content: center}
+                        .col100check {display:flex; flex-direction: column;align-items: center}
+                            
+                        input[type="submit"] {margin: 20px;width:80%}
+                    }
+
+@media (max-width: 420px){
+        body {font-size: 16px;padding: 8px;}
+        .fila {padding: 25px 10px;}
+        .newsletter{font-size: 20px; text-align: center}
+        .input_newsletter {font-size: 14px;padding: 12px; border-radius: 24px;}
+        .boton_newsletter {font-size: 14px;padding: 10px; border-radius: 24px;}
+}
+
+@media (max-width:415px){
+        .izquierda, .centro, .derecha {flex-basis: 100px;}
+} 
+
+@media (max-width: 360px) {body,input,select{font-size: 15px;}
+                                        h1{font-size: 20px;}}
+
+/* 320                                         */
+        
+        
+        
+        
